@@ -12,11 +12,52 @@ function howManyMovies(arr){
         return (arraySpielberg && dramaMovie);
     }).length;
 }
+
+
 // Iteration 3: All rates average - Get the average of all rates with 2 decimals
+// function ratesAverage(arrMovies){
+
+//     if(arrMovies.length === 0){
+//         return 0;
+//     }
+
+    // return 
+    
+        // Number(arrMovies.reduce((accumulator, movie) => {
+        //     console.log(accumulator, typeof accumulator)
+        //     return Number(accumulator += parseInt(movie.rate));
+        
+    // }))
+
+    
+    // /arrMovies.length).toFixed(2)
+
+//     return (arrMovies.reduce(( (let accumulator = 0), movie) => {return ((accumulator += parseInt(movie.rate))}))
+
+// }
 
 // Iteration 4: Drama movies - Get the average of Drama Movies
 
+// function dramaMovieRate(arr){
+//     let dramaMoviesfilter = array.filter(eachMovie => eachMovie.genre.includes('Drama'))
+// }
+
 // Iteration 5: Ordering by year - Order by year, ascending (in growing order)
+function orderByYear (array){
+    let result = array.sort((a,b) => { 
+        if (a.year > b.year){
+            return 1;
+        }else if(b.year > a.year){
+            return -1;
+        }else{
+            return a.title.localeCompare(b.title);
+        }
+    
+    
+    })
+    return [...result]
+
+}
 
 // Iteration 6: Alphabetic Order - Order by title and print the first 20 titles
 
