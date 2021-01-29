@@ -107,6 +107,20 @@ function orderByYear (array){
 
 // Iteration 6: Alphabetic Order - Order by title and print the first 20 titles
 
+    function orderAlphabetically(arr){
+        //sorts by title << use localCompare to compare Strings >>
+
+        // Makes a copy of the array and sorts it
+        let sortedArr = [...arr].sort((a,b) =>{
+            return (a.title.localeCompare(b.title))
+        })
+
+        
+        // Slices the first 20 entries of the list
+        let first20titles = sortedArr.slice(0,20).map(item =>{return item.title})
+
+        return first20titles
+    }
 
 
 // BONUS - Iteration 7: Time Format - Turn duration of the movies from hours to minutes
